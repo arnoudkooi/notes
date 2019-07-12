@@ -10,3 +10,5 @@ Community: https://community.servicenow.com/community?id=community_article&sys_i
 Widget Lab: https://developer.servicenow.com/app.do#!/event/creatorcon18/CCW0041 . 
 
 Widget reservation:   
+
+MeetUp: https://www.meetup.com/Amsterdam-ServiceNow-Developer-Meetup

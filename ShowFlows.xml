@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2021-06-23 20:06:39">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Adds a UI action to the Incident form, that checks for related Flowdesigner flows, and opens an UI page with links to the FlowDesigner Contexts
+Provided by Arnoud Kooi
+</description>
+<inserted/>
+<name>Flowdesigner UI Action 1.5</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>504a02f94f746b0035e0fdb28110c77d</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>Arnoud.Kooi</sys_created_by>
+<sys_created_on>2021-06-23 20:06:39</sys_created_on>
+<sys_id>87e6232b1b3c7c90b98910e22a4bcba8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Arnoud.Kooi</sys_updated_by>
+<sys_updated_on>2021-06-23 20:06:39</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_513bee2a4f765b0035e0fdb28110c7ef</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;show_flows&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments&gt;The condition check can lead to performance issues, in large instances, test and remove if necessary&amp;#13;
+Condition to use: GetFlowContexts(current).length &amp;gt;0&lt;/comments&gt;&lt;condition/&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;name&gt;Show Flows&lt;/name&gt;&lt;onclick&gt;showFlows()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function showFlows(){
+	var flws = new GlideModal('show_flows');
+	flws.setTitle("Executed FlowDesigner Flows");
+	flws.setPreference('sysparm_nostack', true);
+	flws.setPreference('sysparm_table', g_form.getTableName());
+	flws.setPreference('sysparm_sys_id', g_form.getUniqueValue());
+	flws.render();
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Arnoud.Kooi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-06-22 22:11:19&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;513bee2a4f765b0035e0fdb28110c7ef&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Show Flows&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_513bee2a4f765b0035e0fdb28110c7ef&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Arnoud.Kooi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-06-13 19:03:11&lt;/sys_updated_on&gt;&lt;table&gt;task&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;true&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>1151563164</payload_hash>
+<remote_update_set display_value="Flowdesigner UI Action 1.5">87e6232b1b3c7c90b98910e22a4bcba8</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>Arnoud.Kooi</sys_created_by>
+<sys_created_on>2021-06-23 20:06:39</sys_created_on>
+<sys_id>07e6232b1b3c7c90b98910e22a4bcba9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>16b5238ef610000001</sys_recorded_at>
+<sys_updated_by>Arnoud.Kooi</sys_updated_by>
+<sys_updated_on>2021-06-23 20:06:39</sys_updated_on>
+<table>task</table>
+<target_name>Show Flows</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>e8561f4deac6bb40a7b3714d1956c23f</update_guid>
+<update_guid_history>e8561f4deac6bb40a7b3714d1956c23f:1151563164,1c614b89470ebb4081aae027c6e07f1a:-459541895,f1af0231acb46b006cb17cd2bbafa97b:-227596245,9db4432a46b65b00a33f4554c0a348fd:-247910551,edc34a1a30d39f006052aea4b49ed67c:-209312038,9db4432a46b65b00a33f4554c0a348fd:-247910551,f99d7ee208b65b000d401e592550a7e6:2012897205,4f9cfea2b1b65b0076b4968233e55640:1657066987,cd8ba26a75765b0030d48dd3ae7efcc5:567132654,916b226a51765b003641c09e29fc719f:-417789637</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_bc7c2e6a4f765b0035e0fdb28110c792</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description&gt;Shows FlowDesigner flows&lt;/description&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint/&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;g:evaluate object="true"&gt;
+        var gr_contexts = new GlideRecord('sys_flow_context');		gr_contexts.addEncodedQuery("sys_id=javascript:GetFlowContexts('${sysparm_table}','${sysparm_sys_id}')"); 
+		gr_contexts.orderByDesc('sys_updated_on');
+		gr_contexts.query();
+		gr_contexts;
+	&lt;/g:evaluate&gt;
+	&lt;ul style="margin-left:20px; font-size:11pt"&gt;
+		&lt;j:while test="${gr_contexts.next()}"&gt;
+			&lt;li&gt;
+				&lt;a href='/$flow-designer.do#/operations/context/${gr_contexts.getUniqueValue()}' target='flow'&gt;
+					${gr_contexts.getDisplayValue('name')} - 
+					${gr_contexts.getDisplayValue('state')} - 
+					${gr_contexts.getDisplayValue('sys_updated_on')}
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/j:while&gt;
+	&lt;/ul&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;show_flows&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Arnoud.Kooi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-06-22 22:40:57&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;bc7c2e6a4f765b0035e0fdb28110c792&lt;/sys_id&gt;&lt;sys_mod_count&gt;36&lt;/sys_mod_count&gt;&lt;sys_name&gt;show_flows&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_bc7c2e6a4f765b0035e0fdb28110c792&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Arnoud.Kooi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-09-27 22:35:07&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-1009029371</payload_hash>
+<remote_update_set display_value="Flowdesigner UI Action 1.5">87e6232b1b3c7c90b98910e22a4bcba8</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>Arnoud.Kooi</sys_created_by>
+<sys_created_on>2021-06-23 20:06:39</sys_created_on>
+<sys_id>c7e6232b1b3c7c90b98910e22a4bcba9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1661d2be3c90000001</sys_recorded_at>
+<sys_updated_by>Arnoud.Kooi</sys_updated_by>
+<sys_updated_on>2021-06-23 20:06:39</sys_updated_on>
+<table/>
+<target_name>show_flows</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_guid>f70312f188b46b00d0ed6a06242aad58</update_guid>
+<update_guid_history>f70312f188b46b00d0ed6a06242aad58:-1009029371,e86fcafdaf746b00d7e0e61874e62569:908140845,163d0e7dcb746b004f3e55619a79f219:-1333317203,d21d867d8d746b00a12e41a38ba47c75:2069069253,0775f47645ba5b00f90baf47e4b3c7ad:1034782953,cc82897e35365b00862d9f55701a5c54:-2037909774,4572497e95365b009763b728f947ecd6:-83963608,e562097ec8365b00a5f55eddf7c13b12:631708137,e1209baea3b65b00d2ebdfa9da3112ee:1034782953,8e0fba26b5b65b007b23830d084d64cf:382175363,dabeba261db65b008d523a394d1fb794:-1917621645,749e3a2603b65b002a0647a4e2f33efa:381662514,971efee2a6b65b0050fe6345d3bade79:1416774717,895d7ae2f3b65b00a498e93013889f65:472463487,c31df2e227b65b00f3c8424d91d0b4a2:867980435,91ab3aa298b65b00a3162c5d9a692c7e:1660050132,a49bf6a2deb65b00f8cf5f37b2666820:1990365492,357bb6a2e7b65b00d88bbea23f8b5e34:-563787851,ae5bfe626bb65b003c59a8c212593ce6:1345354,043b36a282b65b0006820f8c81532733:2095981951,56aa7e62afb65b0065b54bc38b09e5a7:281576094,9d3a76622ab65b0053f355609500bccf:1824768010,e61af26273b65b00039919242b7fccf6:1561775914,5299f26202b65b00b789797bceb87fef:4201878,b269b2622fb65b00872b556fe2eb941a:1462099871,4f49b26215b65b00c477389661089e07:-1753672001,10a83a2226b65b00474a86916da6044c:-1912371719,c7383a2237b65b00275b69fa898a4545:196108577,6ec73eee8e765b006464524945c4093e:-1799160973,b207faeed2765b00fe3103fcfc6998b8:-1562757675,7ad6baee29765b0052365f02c1470f42:196108577,83b676ee8f765b003cd14614fde98b8e:-1562757675,ff2632ee0c765b0014d33ac21d7dabd7:920969497,d7e532ee45765b005c3cc8afbbd68fdb:2019865463,19a57aaebc765b002be6c1ab478789b2:251165196,7dd476ae4d765b008674d3d1a87125f4:-312728671,00a4f2aed7765b00dd814fae40a58d93:-567003944,7d5472ae14765b003b40d986055d337b:-1433526744,c324be6e59765b00263d849b0960e7ef:303640217,47d3f26e23765b0029ef96355e193355:830368478,a322beeaff765b00daba948b97d86fe6:1779865317</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_d06a262a4f765b0035e0fdb28110c728</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.GetFlowContexts&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Returns the flow designer context records, related to a record in a table&amp;#13;
+Examples: GetFlowContexts(gr_incident); or GetFlowContexts('incident','513bee2a4f765b0035e0fdb28110c7ef');&lt;/description&gt;&lt;name&gt;GetFlowContexts&lt;/name&gt;&lt;script&gt;&lt;![CDATA[/**
+ * Returns the flow designer context records, related to a record in a table
+ * @constructor
+ * @param {GlideRecord or string} tableNameOrGr - The GlideRecord object or tablename
+ * @param {string} sys_id - The sys_id of the record, not needed when a GlideRecord is passed in
+ * @returns {array} - Array of sys_id's of matched records in table sys_flow_context
+ */
+function GetFlowContexts(tableNameOrGr,sys_id){
+
+  var tableName  = tableNameOrGr.getTableName() || tableNameOrGr;
+  sys_id = tableNameOrGr.getUniqueValue() || sys_id;
+  
+  var output = [];
+  var gr_flow = new GlideRecord('sys_flow_plan_context_binding');
+  gr_flow.addQuery('hash_code',sys_id);
+  gr_flow.orderByDesc('sys_created_on');
+  gr_flow.query();
+  while (gr_flow.next()) {
+    output.push(gr_flow.getValue('sys_flow_context'));
+  }
+  return output;
+}
+
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Arnoud.Kooi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-06-22 22:06:53&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;d06a262a4f765b0035e0fdb28110c728&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetFlowContexts&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_d06a262a4f765b0035e0fdb28110c728&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;Arnoud.Kooi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-09-27 22:19:21&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<payload_hash>258660463</payload_hash>
+<remote_update_set display_value="Flowdesigner UI Action 1.5">87e6232b1b3c7c90b98910e22a4bcba8</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>Arnoud.Kooi</sys_created_by>
+<sys_created_on>2021-06-23 20:06:39</sys_created_on>
+<sys_id>cbe6232b1b3c7c90b98910e22a4bcba8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1661d1d727a0000001</sys_recorded_at>
+<sys_updated_by>Arnoud.Kooi</sys_updated_by>
+<sys_updated_on>2021-06-23 20:06:39</sys_updated_on>
+<table/>
+<target_name>GetFlowContexts</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_guid>2c7f8efd74746b007525c620af507b50</update_guid>
+<update_guid_history>2c7f8efd74746b007525c620af507b50:258660463,3b5b063deb746b003049b5e6ce1db44e:1338250543,3938b0f6d6ba5b000e338abd28075d31:1418752608,d9ce354e574b1700bc0beb6831749cd7:1024560054,3938b0f6d6ba5b000e338abd28075d31:1418752608,06f6b0b629ba5b00ce6290ee9d0c4ff7:-1626360167,de10faea23765b009c8bdf9a6d907f47:1931301541,346a662a49765b00f36f3cb5ce4b7530:779056997</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
